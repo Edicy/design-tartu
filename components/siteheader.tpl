@@ -15,3 +15,4 @@
     <meta name="viewport" content="initial-scale=1" />
 	<!--[if IE]><link rel="stylesheet" href="http://static.edicy.com/assets/ie.css" type="text/css" /><![endif]-->
 	<title>{% if article %}{{ article.title }} | {{page.site_title}}{% else %}{{page.site_title}} | {{ page.title }}{% endif %}</title>
+    <script src="{{ javascripts_path }}/modernizr.js"></script>

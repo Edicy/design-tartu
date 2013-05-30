@@ -21,6 +21,16 @@
 			<div id="content-wrap" class="clear">
 				<div class="wide-column clear">
                     {% addbutton class="add-article" %}
+                    {% if tags %}
+                        <div class="tagged-list-header">
+                            <div class="header-tag-icon"></div>
+                            {% if tags == empty %}
+                                {{ "no_posts_tagged" | lc }}
+                            {% else %}
+                                {{ "posts_tagged" | lc }} '{{ tags | sort:"name" | map:"name" | join:"', '"}}'.
+                            {% endif %}
+                        </div>
+                    {% endif %}
     				<ul id="blog-list">
                     {% for article in articles %}
 						<li>
