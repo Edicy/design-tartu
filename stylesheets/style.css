@@ -125,11 +125,16 @@ img {
 #nav a:hover {
 	background: #2491d8;
 }
+#header .site-options {
+	margin-top: 8px;
+	margin-bottom: 9px;
+	float: right;
+}
 /* langmenu */
 #langmenu {
-	position: absolute;
-    right: 0;
-    top: 8px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
 	background: #1170ae;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -139,6 +144,8 @@ img {
 	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.15) inset;
 	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.15) inset;		
 }
+
+
 #langmenu-inner {
 	background: url('../images/arrow.png?1') no-repeat right center;
 	color: #fff;
@@ -151,41 +158,47 @@ img {
 }
 #langmenu-select {
 	opacity: 0;
-	height: 31px;
 	position: absolute;
-	right: 0;
 	top: 0;
-	width: 59px;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	-webkit-appearance: menulist-button;
+	font-size: 11px;	
 	filter: alpha(opacity=0)
 }
+
 /* search */
 #search-wrap {
-	position: absolute;
-    right: 49px;
-    top: 0;
-	margin: 0 17px 0 0;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
 }
 #search-wrap .active {
-	background: #3A9DDF;
+	background: #1170ae;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.15) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.15) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.15) inset;		
 }
 #search-btn span {
 	background: url('../images/search.png?1') no-repeat center center;	
 	float: right;
-	height: 46px;
 	position: relative;
 	text-indent: -9999px;
 	width: 37px;
+	cursor: pointer
 }
 #search-btn {
 	float: right;
-    height: 46px;
-    width: 37px;
+  width: 37px;
 	cursor: pointer;
+	padding-top: 4px;
+	padding-bottom: 5px;
 }
 #search {
 	position: absolute;
-	top: 46px;
-	right: 0;
+	top: 39px;
+	left: 0;
 	border: 4px solid #3A9DDF;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -193,6 +206,13 @@ img {
 	display: none;
     z-index: 120
 }
+@media only screen and (max-width: 1120px) {
+	#search {
+		left: auto;
+		right: 0;
+	}
+}
+
 #onpage_search {
 	font: 14px/30px Helvetica, Arial, Verdana, sans-serif;	
 	border: none;
@@ -622,9 +642,9 @@ img {
 	}
 }
 .add-lang {
-	position: absolute;
-	right: 0;
-	top: 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
 }
 .photo_gallery_area a img {
 	margin: 0 7px 10px 0;
